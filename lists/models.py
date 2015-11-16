@@ -5,6 +5,9 @@ class List(models.Model):
     
     def get_absolute_url(self):
         return reverse('view_list', args=[self.id])
+    
+    def __str__(self):
+        return self.text
 
 
 class Item(models.Model):
